@@ -1,0 +1,1 @@
+<h2 class="text-center text-3xl text-red-500 p-6 mt-20">Rubrique <span class="font-bold uppercase"><?= $main_title ?></span></h2>

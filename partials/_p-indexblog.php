@@ -1,0 +1,1 @@
+<p class="text-gray-400 mt-2">Tous nos articles <?= $main_title ?></p>
