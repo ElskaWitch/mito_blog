@@ -54,7 +54,8 @@ session_start();
   <?php $main_title = "Politique";
     include("partials/_h2.php") ?>
 </div>
-
+<div class="carousel carousel-center max-w-[100%] p-4 space-x-4 bg-black-500 rounded-box">
+  <div class="carousel-item">
     <section  class="mt-10 flex justify-center space-x-10 text-gray-100 ">
       <?php
       foreach ($politiques as $politique) { ?>
@@ -70,28 +71,33 @@ session_start();
       </a>
     <?php } ?>
     </section>
- 
+  </div>
+</div>
 
 <!-- section Sev Web -->
 <div class="">
   <?php $main_title = "Dev-Web";
     include("partials/_h2.php") ?>
 </div>    
-<section  class="mt-10 flex justify-center space-x-10 text-gray-100 ">
-  <?php
-  foreach ($dev_webs as $dev_web) { ?>
-   <a href="showBlog.php?id=<?=$dev_web['id'] ?>&name=<?= $dev_web['titre']?>&auteur=<?= $dev_web['auteur']?>">
-    <div class="p-2 bg-gray-900 w-[200px] h-[300px] rounded grid justify-items-center text-center ">
-      <div>
-        <h2 class="font-bold mb-2 text-[20px]" ><?= $dev_web['titre'] ?></h2>
-        <p class="mt-4 mb-5" >Auteur: <?= $dev_web['auteur'] ?></p>
-        <p class="italic text-gray-400"><?= $dev_web['created_at'] ?></p>
+<div class="carousel carousel-center max-w-[100%] p-4 space-x-4 bg-black-500 rounded-box">
+  <div class="carousel-item">    
+    <section  class="mt-10 flex justify-center space-x-10 text-gray-100 ">
+      <?php
+      foreach ($dev_webs as $dev_web) { ?>
+      <a href="showBlog.php?id=<?=$dev_web['id'] ?>&name=<?= $dev_web['titre']?>&auteur=<?= $dev_web['auteur']?>">
+        <div class="p-2 bg-gray-900 w-[200px] h-[300px] rounded grid justify-items-center text-center ">
+          <div>
+            <h2 class="font-bold mb-2 text-[20px]" ><?= $dev_web['titre'] ?></h2>
+            <p class="mt-4 mb-5" >Auteur: <?= $dev_web['auteur'] ?></p>
+            <p class="italic text-gray-400"><?= $dev_web['created_at'] ?></p>
+          </div>
+          <img class="mt-2 h-[110px]" src="admin/<?= $dev_web["url_img"] ?>" alt="<?= $dev_web["titre"] ?>">
       </div>
-      <img class="mt-2 h-[110px]" src="admin/<?= $dev_web["url_img"] ?>" alt="<?= $dev_web["titre"] ?>">
-   </div>
-  </a>
- <?php } ?>
-</section>
+      </a>
+    <?php } ?>
+    </section>
+  </div>
+</div>
 
 <section>
   <h2 class="text-5xl font-semibold text-center uppercase text-white p-10 mt-20">Newsletter</h2>

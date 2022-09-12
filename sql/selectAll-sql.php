@@ -20,7 +20,7 @@
     // debug_array($politiques); //affiche le tabelau avec tous les objets
 
      // 1- Requête pour récupérer mes jeux / Query to get all games
-    $sql =  "SELECT * FROM  blog WHERE categorie = 'politique' ORDER BY created_at DESC LIMIT 4 "; //si l'on veut plus spécifique on remplace * par name, genre...
+    $sql =  "SELECT * FROM  blog WHERE categorie = 'politique' ORDER BY created_at DESC LIMIT 10 "; //si l'on veut plus spécifique on remplace * par name, genre...
     // 2- Prépare la requête (preformater la requête)
     $query = $pdo->prepare($sql);
     // 3- execute ma requête
@@ -30,7 +30,7 @@
     // debug_array($politiques); //affiche le tabelau avec tous les objets
 
      // 1- Requête pour récupérer mes jeux / Query to get all games
-    $sql =  "SELECT * FROM  blog WHERE categorie = 'dev web' ORDER BY created_at DESC LIMIT 4"; //si l'on veut plus spécifique on remplace * par name, genre...
+    $sql =  "SELECT * FROM  blog WHERE categorie = 'dev web' ORDER BY created_at DESC LIMIT 10"; //si l'on veut plus spécifique on remplace * par name, genre...
     // 2- Prépare la requête (preformater la requête)
     $query = $pdo->prepare($sql);
     // 3- execute ma requête
