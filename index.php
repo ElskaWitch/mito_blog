@@ -29,42 +29,48 @@ session_start();
   <?php $main_title = "Sport";
     include("partials/_h2.php") ?>
 </div>
-<section  class="mt-10 flex justify-center space-x-10 text-gray-100 ">
-  <?php
-  foreach ($sports as $sport) { ?>
-   <a href="showBlog.php?id=<?=$sport['id'] ?>&name=<?= $sport['titre']?>&auteur=<?= $sport['auteur']?>">
-    <div class="p-2 bg-gray-900 w-[200px] h-[300px] rounded grid justify-items-center text-center ">
-      <div>
-        <h2 class="font-bold mb-2 text-[20px]" ><?= $sport['titre'] ?></h2>
-        <p class="mt-4 mb-5" >Auteur: <?= $sport['auteur'] ?></p>
-        <p class="italic text-gray-400"><?= $sport['created_at'] ?></p>
+<div class="carousel carousel-center max-w-[100%] p-4 space-x-4 bg-black-500 rounded-box">
+  <div class="carousel-item">
+    <section  class="mt-10 flex justify-center space-x-10 text-gray-100 ">
+      <?php
+      foreach ($sports as $sport) { ?>
+      <a href="showBlog.php?id=<?=$sport['id'] ?>&name=<?= $sport['titre']?>&auteur=<?= $sport['auteur']?>">
+        <div class="p-2 bg-gray-900 w-[200px] h-[300px] rounded grid justify-items-center text-center ">
+          <div>
+            <h2 class="font-bold mb-2 text-[20px]" ><?= $sport['titre'] ?></h2>
+            <p class="mt-4 mb-5" >Auteur: <?= $sport['auteur'] ?></p>
+            <p class="italic text-gray-400"><?= $sport['created_at'] ?></p>
+          </div>
+          <img class="mt-2 h-[110px]" src="admin/<?= $sport["url_img"] ?>" alt="<?= $sport["titre"] ?>">
       </div>
-      <img class="mt-2 h-[110px]" src="admin/<?= $sport["url_img"] ?>" alt="<?= $sport["titre"] ?>">
-   </div>
-  </a>
- <?php } ?>
-</section>
+      </a>
+    <?php } ?>
+    </section> 
+  </div>
+</div>
 
 <!-- section politique -->
 <div class="">
   <?php $main_title = "Politique";
     include("partials/_h2.php") ?>
 </div>
-<section  class="mt-10 flex justify-center space-x-10 text-gray-100 ">
-  <?php
-  foreach ($politiques as $politique) { ?>
-   <a href="showBlog.php?id=<?=$politique['id'] ?>&name=<?= $politique['titre']?>&auteur=<?= $politique['auteur']?>">
-    <div class="p-2 bg-gray-900 w-[200px] h-[300px] rounded grid justify-items-center text-center ">
-      <div>
-        <h2 class="font-bold mb-2 text-[20px]" ><?= $politique['titre'] ?></h2>
-        <p class="mt-4 mb-5" >Auteur: <?= $politique['auteur'] ?></p>
-        <p class="italic text-gray-400"><?= $politique['created_at'] ?></p>
+
+    <section  class="mt-10 flex justify-center space-x-10 text-gray-100 ">
+      <?php
+      foreach ($politiques as $politique) { ?>
+      <a href="showBlog.php?id=<?=$politique['id'] ?>&name=<?= $politique['titre']?>&auteur=<?= $politique['auteur']?>">
+        <div class="p-2 bg-gray-900 w-[200px] h-[300px] rounded grid justify-items-center text-center ">
+          <div>
+            <h2 class="font-bold mb-2 text-[20px]" ><?= $politique['titre'] ?></h2>
+            <p class="mt-4 mb-5" >Auteur: <?= $politique['auteur'] ?></p>
+            <p class="italic text-gray-400"><?= $politique['created_at'] ?></p>
+          </div>
+          <img class="mt-2 h-[110px]" src="admin/<?= $politique["url_img"] ?>" alt="<?= $politique["titre"] ?>">
       </div>
-      <img class="mt-2 h-[110px]" src="admin/<?= $politique["url_img"] ?>" alt="<?= $politique["titre"] ?>">
-   </div>
-  </a>
- <?php } ?>
-</section>
+      </a>
+    <?php } ?>
+    </section>
+ 
 
 <!-- section Sev Web -->
 <div class="">
